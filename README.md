@@ -1,7 +1,11 @@
 # Conway's Game of Life in C
 
+![Language: C](https://img.shields.io/badge/Language-C-blue.svg)
+![Build: CMake](https://img.shields.io/badge/Build-CMake-brightgreen.svg)
+![Platform: Windows Console](https://img.shields.io/badge/Platform-Windows%20Console-0078D6.svg)
+
 A console-based implementation of **Conway’s Game of Life** written in C.
-The project simulates a 2D cellular automaton and renders it in the terminal using the Win32 console API for faster output than plain `printf`.
+The project simulates a 2D cellular automaton and renders it in the terminal using the Win32 console API for significantly faster output than plain `printf`.
 
 ## Why this project
 
@@ -10,6 +14,19 @@ This repository demonstrates:
 - manual memory management in C,
 - argument parsing and interactive CLI input,
 - file-based import/export of simulation states.
+
+## Demo (GIF / Screenshot)
+
+### Console preview
+> Add your best short recording or screenshot here for profile visitors.
+>
+> Suggested file path: `assets/gameplay.gif` (or `assets/screenshot.png`)
+
+```md
+![Gameplay demo](assets/gameplay.gif)
+```
+
+If you'd like, I can also help you generate a polished demo GIF from one of the patterns in `examples/`.
 
 ## Game rules
 
@@ -95,15 +112,18 @@ Used in `main.c` for application defaults and runtime parameters.
 - `loadStateFromFile`, `saveStateToFile` – persistence.
 - `convertToChar`, `render2d` – visual output in console.
 
+## What I learned
+
+Building this project strengthened practical C and systems-programming skills:
+
+- Designing compact data layouts (`width * height` flat array) for performance and simpler memory allocation.
+- Managing dynamic memory lifecycle (`create`/`destroy`) carefully to avoid leaks during iterative simulation.
+- Separating concerns between simulation logic and rendering code to keep modules maintainable.
+- Balancing readability and performance by replacing slow console printing with Win32 buffer rendering.
+- Building CLI UX that supports both interactive mode and scripted/headless runs.
+
 ## Notes
 
 - Random initialization depends on `srand(time(NULL))` in `main.c`.
 - In graphical mode, frame timing is controlled by `fps` in `Settings`.
 - The renderer hides the cursor during runtime and restores it on exit.
-
----
-
-If you'd like, I can also add:
-- a short GIF/screenshot section,
-- badges (language/build/tooling),
-- and a dedicated "What I learned" section to make the repo even stronger for profile visitors.
