@@ -18,15 +18,10 @@ This repository demonstrates:
 ## Demo (GIF / Screenshot)
 
 ### Console preview
-> Add your best short recording or screenshot here for profile visitors.
->
-> Suggested file path: `assets/gameplay.gif` (or `assets/screenshot.png`)
 
 ```md
 ![Gameplay demo](assets/gameplay.gif)
 ```
-
-If you'd like, I can also help you generate a polished demo GIF from one of the patterns in `examples/`.
 
 ## Game rules
 
